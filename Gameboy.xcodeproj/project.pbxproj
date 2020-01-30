@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80428C422374DBC40085F4F2 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80428C412374DBC40085F4F2 /* Instruction.swift */; };
+		80428C432374DBC40085F4F2 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80428C412374DBC40085F4F2 /* Instruction.swift */; };
+		80428C442374DBC40085F4F2 /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80428C412374DBC40085F4F2 /* Instruction.swift */; };
+		805E718D23E2E89B007180FE /* GameboyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */; };
 		80734A222373E36B00070C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A212373E36B00070C59 /* AppDelegate.swift */; };
 		80734A242373E36B00070C59 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A232373E36B00070C59 /* GameViewController.swift */; };
 		80734A272373E36B00070C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80734A252373E36B00070C59 /* Main.storyboard */; };
@@ -16,26 +20,89 @@
 		80734A382373E36B00070C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80734A362373E36B00070C59 /* Main.storyboard */; };
 		80734A3B2373E36B00070C59 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80734A392373E36B00070C59 /* LaunchScreen.storyboard */; };
 		80734A442373E36B00070C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A432373E36B00070C59 /* AppDelegate.swift */; };
-		80734A462373E36B00070C59 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A452373E36B00070C59 /* GameViewController.swift */; };
 		80734A492373E36B00070C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 80734A472373E36B00070C59 /* Main.storyboard */; };
-		80734A4B2373E36B00070C59 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A162373E36800070C59 /* Actions.sks */; };
-		80734A4C2373E36B00070C59 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A162373E36800070C59 /* Actions.sks */; };
-		80734A4D2373E36B00070C59 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A162373E36800070C59 /* Actions.sks */; };
-		80734A4E2373E36B00070C59 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A172373E36800070C59 /* GameScene.sks */; };
-		80734A4F2373E36B00070C59 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A172373E36800070C59 /* GameScene.sks */; };
-		80734A502373E36B00070C59 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 80734A172373E36800070C59 /* GameScene.sks */; };
-		80734A512373E36B00070C59 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A182373E36800070C59 /* GameScene.swift */; };
-		80734A522373E36B00070C59 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A182373E36800070C59 /* GameScene.swift */; };
-		80734A532373E36B00070C59 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80734A182373E36800070C59 /* GameScene.swift */; };
 		80734A542373E36B00070C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80734A192373E36B00070C59 /* Assets.xcassets */; };
 		80734A552373E36B00070C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80734A192373E36B00070C59 /* Assets.xcassets */; };
 		80734A562373E36B00070C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 80734A192373E36B00070C59 /* Assets.xcassets */; };
+		807BCAB723D94E440094D5F8 /* GameboyScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 807BCAB623D94E440094D5F8 /* GameboyScreen.sks */; };
+		807BCAB823D94E440094D5F8 /* GameboyScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 807BCAB623D94E440094D5F8 /* GameboyScreen.sks */; };
+		807BCAB923D94E440094D5F8 /* GameboyScreen.sks in Resources */ = {isa = PBXBuildFile; fileRef = 807BCAB623D94E440094D5F8 /* GameboyScreen.sks */; };
+		807BCABB23D94FDC0094D5F8 /* ScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCABA23D94FDC0094D5F8 /* ScreenViewController.swift */; };
+		807BCABD23D9500F0094D5F8 /* GameboyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */; };
+		807BCABE23D9500F0094D5F8 /* GameboyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */; };
+		807BCABF23D9500F0094D5F8 /* GameboyScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */; };
+		808DA56823751ACB00C1E28D /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA56723751ACB00C1E28D /* CPU.swift */; };
+		808DA56923751ACB00C1E28D /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA56723751ACB00C1E28D /* CPU.swift */; };
+		808DA56A23751ACB00C1E28D /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA56723751ACB00C1E28D /* CPU.swift */; };
+		808DA5AA2375254600C1E28D /* DisassemblerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5A92375254600C1E28D /* DisassemblerTests.swift */; };
+		808DA5B12375255D00C1E28D /* Instruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80428C412374DBC40085F4F2 /* Instruction.swift */; };
+		808DA5B22375255F00C1E28D /* CPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA56723751ACB00C1E28D /* CPU.swift */; };
+		808DA5B923759D5B00C1E28D /* InstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5B823759D5A00C1E28D /* InstructionSet.swift */; };
+		808DA5BA23759D5B00C1E28D /* InstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5B823759D5A00C1E28D /* InstructionSet.swift */; };
+		808DA5BB23759D5B00C1E28D /* InstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5B823759D5A00C1E28D /* InstructionSet.swift */; };
+		808DA5BC23759D5B00C1E28D /* InstructionSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5B823759D5A00C1E28D /* InstructionSet.swift */; };
+		808DA5BE237680B900C1E28D /* Gameboy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5BD237680B900C1E28D /* Gameboy.swift */; };
+		808DA5BF237680B900C1E28D /* Gameboy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5BD237680B900C1E28D /* Gameboy.swift */; };
+		808DA5C0237680B900C1E28D /* Gameboy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5BD237680B900C1E28D /* Gameboy.swift */; };
+		808DA5C1237680B900C1E28D /* Gameboy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5BD237680B900C1E28D /* Gameboy.swift */; };
+		808DA5C3237686F300C1E28D /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C2237686F300C1E28D /* Memory.swift */; };
+		808DA5C4237686F300C1E28D /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C2237686F300C1E28D /* Memory.swift */; };
+		808DA5C5237686F300C1E28D /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C2237686F300C1E28D /* Memory.swift */; };
+		808DA5C6237686F300C1E28D /* Memory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C2237686F300C1E28D /* Memory.swift */; };
+		808DA5C82376972500C1E28D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C72376972500C1E28D /* Register.swift */; };
+		808DA5C92376972500C1E28D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C72376972500C1E28D /* Register.swift */; };
+		808DA5CA2376972500C1E28D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C72376972500C1E28D /* Register.swift */; };
+		808DA5CB2376972500C1E28D /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5C72376972500C1E28D /* Register.swift */; };
+		808DA5CD2376980D00C1E28D /* Disassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5CC2376980D00C1E28D /* Disassembler.swift */; };
+		808DA5CE2376980D00C1E28D /* Disassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5CC2376980D00C1E28D /* Disassembler.swift */; };
+		808DA5CF2376980D00C1E28D /* Disassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5CC2376980D00C1E28D /* Disassembler.swift */; };
+		808DA5D02376980D00C1E28D /* Disassembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5CC2376980D00C1E28D /* Disassembler.swift */; };
+		808DA5D2237934ED00C1E28D /* GameboyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5D1237934ED00C1E28D /* GameboyViewController.swift */; };
+		808DA5D42379365800C1E28D /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 808DA5D32379365800C1E28D /* SidebarViewController.swift */; };
+		8091738C23E1954A00D12B57 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8091738B23E1954A00D12B57 /* SidebarView.swift */; };
+		80972FBB237A8A1E000C51DC /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80972FBA237A8A1E000C51DC /* Operation.swift */; };
+		80972FBC237A8A1E000C51DC /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80972FBA237A8A1E000C51DC /* Operation.swift */; };
+		80972FBD237A8A1E000C51DC /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80972FBA237A8A1E000C51DC /* Operation.swift */; };
+		80972FBE237A8A1E000C51DC /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80972FBA237A8A1E000C51DC /* Operation.swift */; };
+		80AC048A23DAB76600609331 /* BootROM.bin in Resources */ = {isa = PBXBuildFile; fileRef = 80AC048923DAB76600609331 /* BootROM.bin */; };
+		80AC048C23DAB9E800609331 /* BootROM.bin in Resources */ = {isa = PBXBuildFile; fileRef = 80AC048923DAB76600609331 /* BootROM.bin */; };
+		80AC048D23DAB9E900609331 /* BootROM.bin in Resources */ = {isa = PBXBuildFile; fileRef = 80AC048923DAB76600609331 /* BootROM.bin */; };
+		80CF0CEB237CF64000F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
+		80CF0CEC237CF74800F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
+		80CF0CED237CF74800F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
+		80CF0CEE237CF74900F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
+		80CF0CF0237CFCA200F9A76C /* Byte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEF237CFCA200F9A76C /* Byte.swift */; };
+		80CF0CF1237CFCA200F9A76C /* Byte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEF237CFCA200F9A76C /* Byte.swift */; };
+		80CF0CF2237CFCA200F9A76C /* Byte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEF237CFCA200F9A76C /* Byte.swift */; };
+		80CF0CF3237CFCA200F9A76C /* Byte.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEF237CFCA200F9A76C /* Byte.swift */; };
+		80CF0CF5237E311200F9A76C /* OperationDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CF4237E311200F9A76C /* OperationDecoderTests.swift */; };
+		80CF0CF7237E39C700F9A76C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CF6237E39C700F9A76C /* Address.swift */; };
+		80CF0CF8237E39C700F9A76C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CF6237E39C700F9A76C /* Address.swift */; };
+		80CF0CF9237E39C700F9A76C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CF6237E39C700F9A76C /* Address.swift */; };
+		80CF0CFA237E39C700F9A76C /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CF6237E39C700F9A76C /* Address.swift */; };
+		80CF0CFC237E3C2C00F9A76C /* OperationDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */; };
+		80CF0CFD237E3C2C00F9A76C /* OperationDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */; };
+		80CF0CFE237E3C2C00F9A76C /* OperationDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */; };
+		80CF0CFF237E3C2C00F9A76C /* OperationDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */; };
+		80CF0D01237E50D100F9A76C /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0D00237E50D100F9A76C /* GPU.swift */; };
+		80CF0D02237E50D100F9A76C /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0D00237E50D100F9A76C /* GPU.swift */; };
+		80CF0D03237E50D100F9A76C /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0D00237E50D100F9A76C /* GPU.swift */; };
+		80CF0D04237E50D100F9A76C /* GPU.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0D00237E50D100F9A76C /* GPU.swift */; };
+		80CF0D062381675100F9A76C /* OperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0D052381675100F9A76C /* OperationTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		808DA5AC2375254600C1E28D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 80734A112373E36800070C59 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 80734A402373E36B00070C59;
+			remoteInfo = "Gameboy macOS";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		80734A162373E36800070C59 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
-		80734A172373E36800070C59 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
-		80734A182373E36800070C59 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		80428C412374DBC40085F4F2 /* Instruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instruction.swift; sourceTree = "<group>"; };
 		80734A192373E36B00070C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		80734A1E2373E36B00070C59 /* Gameboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gameboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80734A212373E36B00070C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,9 +118,32 @@
 		80734A3C2373E36B00070C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		80734A412373E36B00070C59 /* Gameboy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Gameboy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		80734A432373E36B00070C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		80734A452373E36B00070C59 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		80734A482373E36B00070C59 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		80734A4A2373E36B00070C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		807BCAB623D94E440094D5F8 /* GameboyScreen.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameboyScreen.sks; sourceTree = "<group>"; };
+		807BCABA23D94FDC0094D5F8 /* ScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenViewController.swift; sourceTree = "<group>"; };
+		807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyScreen.swift; sourceTree = "<group>"; };
+		808DA56723751ACB00C1E28D /* CPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPU.swift; sourceTree = "<group>"; };
+		808DA5A72375254600C1E28D /* GameboyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GameboyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		808DA5A92375254600C1E28D /* DisassemblerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisassemblerTests.swift; sourceTree = "<group>"; };
+		808DA5AB2375254600C1E28D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		808DA5B823759D5A00C1E28D /* InstructionSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionSet.swift; sourceTree = "<group>"; };
+		808DA5BD237680B900C1E28D /* Gameboy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gameboy.swift; sourceTree = "<group>"; };
+		808DA5C2237686F300C1E28D /* Memory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Memory.swift; sourceTree = "<group>"; };
+		808DA5C72376972500C1E28D /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
+		808DA5CC2376980D00C1E28D /* Disassembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Disassembler.swift; sourceTree = "<group>"; };
+		808DA5D1237934ED00C1E28D /* GameboyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameboyViewController.swift; sourceTree = "<group>"; };
+		808DA5D32379365800C1E28D /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
+		8091738B23E1954A00D12B57 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
+		80972FBA237A8A1E000C51DC /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
+		80AC048923DAB76600609331 /* BootROM.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = BootROM.bin; sourceTree = "<group>"; };
+		80CF0CEA237CF64000F9A76C /* Operand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operand.swift; sourceTree = "<group>"; };
+		80CF0CEF237CFCA200F9A76C /* Byte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Byte.swift; sourceTree = "<group>"; };
+		80CF0CF4237E311200F9A76C /* OperationDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDecoderTests.swift; sourceTree = "<group>"; };
+		80CF0CF6237E39C700F9A76C /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDecoder.swift; sourceTree = "<group>"; };
+		80CF0D00237E50D100F9A76C /* GPU.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GPU.swift; sourceTree = "<group>"; };
+		80CF0D052381675100F9A76C /* OperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +168,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		808DA5A42375254600C1E28D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -88,6 +185,7 @@
 				80734A202373E36B00070C59 /* Gameboy iOS */,
 				80734A312373E36B00070C59 /* Gameboy tvOS */,
 				80734A422373E36B00070C59 /* Gameboy macOS */,
+				808DA5A82375254600C1E28D /* GameboyTests */,
 				80734A1F2373E36B00070C59 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,9 +193,22 @@
 		80734A152373E36800070C59 /* Gameboy Shared */ = {
 			isa = PBXGroup;
 			children = (
-				80734A162373E36800070C59 /* Actions.sks */,
-				80734A172373E36800070C59 /* GameScene.sks */,
-				80734A182373E36800070C59 /* GameScene.swift */,
+				80AC048823DAB74A00609331 /* Binaries */,
+				80CF0CF6237E39C700F9A76C /* Address.swift */,
+				80CF0CEF237CFCA200F9A76C /* Byte.swift */,
+				808DA56723751ACB00C1E28D /* CPU.swift */,
+				808DA5CC2376980D00C1E28D /* Disassembler.swift */,
+				808DA5BD237680B900C1E28D /* Gameboy.swift */,
+				807BCAB623D94E440094D5F8 /* GameboyScreen.sks */,
+				807BCABC23D9500F0094D5F8 /* GameboyScreen.swift */,
+				80CF0D00237E50D100F9A76C /* GPU.swift */,
+				80428C412374DBC40085F4F2 /* Instruction.swift */,
+				808DA5B823759D5A00C1E28D /* InstructionSet.swift */,
+				808DA5C2237686F300C1E28D /* Memory.swift */,
+				80CF0CEA237CF64000F9A76C /* Operand.swift */,
+				80972FBA237A8A1E000C51DC /* Operation.swift */,
+				80CF0CFB237E3C2C00F9A76C /* OperationDecoder.swift */,
+				808DA5C72376972500C1E28D /* Register.swift */,
 				80734A192373E36B00070C59 /* Assets.xcassets */,
 			);
 			path = "Gameboy Shared";
@@ -109,6 +220,7 @@
 				80734A1E2373E36B00070C59 /* Gameboy.app */,
 				80734A302373E36B00070C59 /* Gameboy.app */,
 				80734A412373E36B00070C59 /* Gameboy.app */,
+				808DA5A72375254600C1E28D /* GameboyTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -141,11 +253,33 @@
 			isa = PBXGroup;
 			children = (
 				80734A432373E36B00070C59 /* AppDelegate.swift */,
-				80734A452373E36B00070C59 /* GameViewController.swift */,
+				808DA5D1237934ED00C1E28D /* GameboyViewController.swift */,
 				80734A472373E36B00070C59 /* Main.storyboard */,
 				80734A4A2373E36B00070C59 /* Info.plist */,
+				807BCABA23D94FDC0094D5F8 /* ScreenViewController.swift */,
+				808DA5D32379365800C1E28D /* SidebarViewController.swift */,
+				8091738B23E1954A00D12B57 /* SidebarView.swift */,
 			);
 			path = "Gameboy macOS";
+			sourceTree = "<group>";
+		};
+		808DA5A82375254600C1E28D /* GameboyTests */ = {
+			isa = PBXGroup;
+			children = (
+				808DA5A92375254600C1E28D /* DisassemblerTests.swift */,
+				80CF0CF4237E311200F9A76C /* OperationDecoderTests.swift */,
+				80CF0D052381675100F9A76C /* OperationTests.swift */,
+				808DA5AB2375254600C1E28D /* Info.plist */,
+			);
+			path = GameboyTests;
+			sourceTree = "<group>";
+		};
+		80AC048823DAB74A00609331 /* Binaries */ = {
+			isa = PBXGroup;
+			children = (
+				80AC048923DAB76600609331 /* BootROM.bin */,
+			);
+			path = Binaries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +336,24 @@
 			productReference = 80734A412373E36B00070C59 /* Gameboy.app */;
 			productType = "com.apple.product-type.application";
 		};
+		808DA5A62375254600C1E28D /* GameboyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 808DA5AE2375254600C1E28D /* Build configuration list for PBXNativeTarget "GameboyTests" */;
+			buildPhases = (
+				808DA5A32375254600C1E28D /* Sources */,
+				808DA5A42375254600C1E28D /* Frameworks */,
+				808DA5A52375254600C1E28D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				808DA5AD2375254600C1E28D /* PBXTargetDependency */,
+			);
+			name = GameboyTests;
+			productName = GameboyTests;
+			productReference = 808DA5A72375254600C1E28D /* GameboyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -209,7 +361,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1120;
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Brad Feehan";
 				TargetAttributes = {
 					80734A1D2373E36B00070C59 = {
@@ -220,6 +372,10 @@
 					};
 					80734A402373E36B00070C59 = {
 						CreatedOnToolsVersion = 11.2;
+					};
+					808DA5A62375254600C1E28D = {
+						CreatedOnToolsVersion = 11.2;
+						TestTargetID = 80734A402373E36B00070C59;
 					};
 				};
 			};
@@ -239,6 +395,7 @@
 				80734A1D2373E36B00070C59 /* Gameboy iOS */,
 				80734A2F2373E36B00070C59 /* Gameboy tvOS */,
 				80734A402373E36B00070C59 /* Gameboy macOS */,
+				808DA5A62375254600C1E28D /* GameboyTests */,
 			);
 		};
 /* End PBXProject section */
@@ -248,9 +405,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80734A4E2373E36B00070C59 /* GameScene.sks in Resources */,
+				80AC048A23DAB76600609331 /* BootROM.bin in Resources */,
 				80734A272373E36B00070C59 /* Main.storyboard in Resources */,
-				80734A4B2373E36B00070C59 /* Actions.sks in Resources */,
+				807BCAB723D94E440094D5F8 /* GameboyScreen.sks in Resources */,
 				80734A2A2373E36B00070C59 /* LaunchScreen.storyboard in Resources */,
 				80734A542373E36B00070C59 /* Assets.xcassets in Resources */,
 			);
@@ -260,9 +417,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80734A4F2373E36B00070C59 /* GameScene.sks in Resources */,
+				80AC048C23DAB9E800609331 /* BootROM.bin in Resources */,
 				80734A382373E36B00070C59 /* Main.storyboard in Resources */,
-				80734A4C2373E36B00070C59 /* Actions.sks in Resources */,
+				807BCAB823D94E440094D5F8 /* GameboyScreen.sks in Resources */,
 				80734A3B2373E36B00070C59 /* LaunchScreen.storyboard in Resources */,
 				80734A552373E36B00070C59 /* Assets.xcassets in Resources */,
 			);
@@ -272,10 +429,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80AC048D23DAB9E900609331 /* BootROM.bin in Resources */,
 				80734A492373E36B00070C59 /* Main.storyboard in Resources */,
-				80734A502373E36B00070C59 /* GameScene.sks in Resources */,
+				807BCAB923D94E440094D5F8 /* GameboyScreen.sks in Resources */,
 				80734A562373E36B00070C59 /* Assets.xcassets in Resources */,
-				80734A4D2373E36B00070C59 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808DA5A52375254600C1E28D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,9 +450,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80734A512373E36B00070C59 /* GameScene.swift in Sources */,
+				80CF0D01237E50D100F9A76C /* GPU.swift in Sources */,
+				80972FBB237A8A1E000C51DC /* Operation.swift in Sources */,
+				808DA5C3237686F300C1E28D /* Memory.swift in Sources */,
+				808DA5C82376972500C1E28D /* Register.swift in Sources */,
+				80428C422374DBC40085F4F2 /* Instruction.swift in Sources */,
+				808DA5B923759D5B00C1E28D /* InstructionSet.swift in Sources */,
+				808DA5BE237680B900C1E28D /* Gameboy.swift in Sources */,
+				808DA56823751ACB00C1E28D /* CPU.swift in Sources */,
+				80CF0CF7237E39C700F9A76C /* Address.swift in Sources */,
 				80734A242373E36B00070C59 /* GameViewController.swift in Sources */,
+				80CF0CEB237CF64000F9A76C /* Operand.swift in Sources */,
+				80CF0CF0237CFCA200F9A76C /* Byte.swift in Sources */,
+				807BCABD23D9500F0094D5F8 /* GameboyScreen.swift in Sources */,
+				80CF0CFC237E3C2C00F9A76C /* OperationDecoder.swift in Sources */,
 				80734A222373E36B00070C59 /* AppDelegate.swift in Sources */,
+				808DA5CD2376980D00C1E28D /* Disassembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,9 +473,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80734A522373E36B00070C59 /* GameScene.swift in Sources */,
+				80CF0D02237E50D100F9A76C /* GPU.swift in Sources */,
+				80972FBC237A8A1E000C51DC /* Operation.swift in Sources */,
+				808DA5C4237686F300C1E28D /* Memory.swift in Sources */,
+				808DA5C92376972500C1E28D /* Register.swift in Sources */,
+				80428C432374DBC40085F4F2 /* Instruction.swift in Sources */,
+				808DA5BA23759D5B00C1E28D /* InstructionSet.swift in Sources */,
+				808DA5BF237680B900C1E28D /* Gameboy.swift in Sources */,
+				808DA56923751ACB00C1E28D /* CPU.swift in Sources */,
+				80CF0CF8237E39C700F9A76C /* Address.swift in Sources */,
 				80734A352373E36B00070C59 /* GameViewController.swift in Sources */,
+				80CF0CEC237CF74800F9A76C /* Operand.swift in Sources */,
+				80CF0CF1237CFCA200F9A76C /* Byte.swift in Sources */,
+				807BCABE23D9500F0094D5F8 /* GameboyScreen.swift in Sources */,
+				80CF0CFD237E3C2C00F9A76C /* OperationDecoder.swift in Sources */,
 				80734A332373E36B00070C59 /* AppDelegate.swift in Sources */,
+				808DA5CE2376980D00C1E28D /* Disassembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -306,13 +496,61 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80734A532373E36B00070C59 /* GameScene.swift in Sources */,
-				80734A462373E36B00070C59 /* GameViewController.swift in Sources */,
+				808DA5C5237686F300C1E28D /* Memory.swift in Sources */,
+				808DA5CA2376972500C1E28D /* Register.swift in Sources */,
+				8091738C23E1954A00D12B57 /* SidebarView.swift in Sources */,
+				80428C442374DBC40085F4F2 /* Instruction.swift in Sources */,
+				808DA5BB23759D5B00C1E28D /* InstructionSet.swift in Sources */,
+				808DA5C0237680B900C1E28D /* Gameboy.swift in Sources */,
+				80CF0CED237CF74800F9A76C /* Operand.swift in Sources */,
+				80CF0CF9237E39C700F9A76C /* Address.swift in Sources */,
+				807BCABF23D9500F0094D5F8 /* GameboyScreen.swift in Sources */,
+				80CF0CFE237E3C2C00F9A76C /* OperationDecoder.swift in Sources */,
+				80CF0D03237E50D100F9A76C /* GPU.swift in Sources */,
+				808DA56A23751ACB00C1E28D /* CPU.swift in Sources */,
+				807BCABB23D94FDC0094D5F8 /* ScreenViewController.swift in Sources */,
+				808DA5D42379365800C1E28D /* SidebarViewController.swift in Sources */,
+				80CF0CF2237CFCA200F9A76C /* Byte.swift in Sources */,
 				80734A442373E36B00070C59 /* AppDelegate.swift in Sources */,
+				80972FBD237A8A1E000C51DC /* Operation.swift in Sources */,
+				808DA5CF2376980D00C1E28D /* Disassembler.swift in Sources */,
+				808DA5D2237934ED00C1E28D /* GameboyViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		808DA5A32375254600C1E28D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				808DA5C6237686F300C1E28D /* Memory.swift in Sources */,
+				808DA5C1237680B900C1E28D /* Gameboy.swift in Sources */,
+				808DA5AA2375254600C1E28D /* DisassemblerTests.swift in Sources */,
+				80CF0D062381675100F9A76C /* OperationTests.swift in Sources */,
+				808DA5D02376980D00C1E28D /* Disassembler.swift in Sources */,
+				808DA5BC23759D5B00C1E28D /* InstructionSet.swift in Sources */,
+				80972FBE237A8A1E000C51DC /* Operation.swift in Sources */,
+				808DA5CB2376972500C1E28D /* Register.swift in Sources */,
+				80CF0CEE237CF74900F9A76C /* Operand.swift in Sources */,
+				80CF0CF3237CFCA200F9A76C /* Byte.swift in Sources */,
+				808DA5B12375255D00C1E28D /* Instruction.swift in Sources */,
+				80CF0CFA237E39C700F9A76C /* Address.swift in Sources */,
+				805E718D23E2E89B007180FE /* GameboyScreen.swift in Sources */,
+				808DA5B22375255F00C1E28D /* CPU.swift in Sources */,
+				80CF0CFF237E3C2C00F9A76C /* OperationDecoder.swift in Sources */,
+				80CF0CF5237E311200F9A76C /* OperationDecoderTests.swift in Sources */,
+				80CF0D04237E50D100F9A76C /* GPU.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		808DA5AD2375254600C1E28D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 80734A402373E36B00070C59 /* Gameboy macOS */;
+			targetProxy = 808DA5AC2375254600C1E28D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		80734A252373E36B00070C59 /* Main.storyboard */ = {
@@ -549,6 +787,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Gameboy macOS/Info.plist";
@@ -556,7 +795,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Gameboy;
 				PRODUCT_NAME = Gameboy;
 				SDKROOT = macosx;
@@ -568,6 +807,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Gameboy macOS/Info.plist";
@@ -575,11 +815,53 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.Gameboy;
 				PRODUCT_NAME = Gameboy;
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		808DA5AF2375254600C1E28D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GameboyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.GameboyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gameboy.app/Contents/MacOS/Gameboy";
+			};
+			name = Debug;
+		};
+		808DA5B02375254600C1E28D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = GameboyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bradfeehan.GameboyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Gameboy.app/Contents/MacOS/Gameboy";
 			};
 			name = Release;
 		};
@@ -618,6 +900,15 @@
 			buildConfigurations = (
 				80734A602373E36B00070C59 /* Debug */,
 				80734A612373E36B00070C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		808DA5AE2375254600C1E28D /* Build configuration list for PBXNativeTarget "GameboyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				808DA5AF2375254600C1E28D /* Debug */,
+				808DA5B02375254600C1E28D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

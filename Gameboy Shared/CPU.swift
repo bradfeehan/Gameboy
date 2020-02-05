@@ -110,7 +110,6 @@ class CPU {
 
             if interruptsToFire.vblank {
                 interruptsFlags.vblank = false
-                gameboy.gpu.vblank()
                 fireInterrupt(vector: ._40)
             }
 

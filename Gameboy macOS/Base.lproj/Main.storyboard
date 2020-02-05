@@ -657,21 +657,33 @@
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
+                                        <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="lxi-kU-avx">
+                                            <rect key="frame" x="78" y="20" width="70" height="16"/>
+                                            <textFieldCell key="cell" lineBreakMode="clipping" title="(000, 000)" id="2Tl-ur-TXQ">
+                                                <font key="font" metaFont="system"/>
+                                                <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            </textFieldCell>
+                                        </textField>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="l1G-nB-pyx" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Ona-Bq-3dU" secondAttribute="leading" constant="20" symbolic="YES" id="1FJ-5y-pBC"/>
                                         <constraint firstItem="l1G-nB-pyx" firstAttribute="trailing" secondItem="JtY-xF-S0g" secondAttribute="trailing" id="24X-hI-Jvr"/>
                                         <constraint firstItem="JtY-xF-S0g" firstAttribute="top" secondItem="RjD-Ju-Exe" secondAttribute="bottom" constant="8" symbolic="YES" id="3wE-Jy-QuV"/>
                                         <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="HuZ-OE-BtT" secondAttribute="trailing" constant="20" symbolic="YES" id="51G-mV-f1r"/>
+                                        <constraint firstItem="lxi-kU-avx" firstAttribute="leading" secondItem="tVg-1j-4rq" secondAttribute="leading" id="B9M-hq-Pj4"/>
                                         <constraint firstItem="p7b-Ab-Lml" firstAttribute="trailing" secondItem="Ca6-D6-0It" secondAttribute="trailing" id="BGn-B8-phk"/>
                                         <constraint firstItem="P6t-N6-JJe" firstAttribute="trailing" secondItem="l1G-nB-pyx" secondAttribute="trailing" id="BNd-za-ABR"/>
                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="p7b-Ab-Lml" secondAttribute="bottom" constant="20" symbolic="YES" id="BSI-Ab-UO1"/>
                                         <constraint firstItem="lSW-NY-0jo" firstAttribute="top" secondItem="ifH-PW-jhJ" secondAttribute="bottom" constant="8" symbolic="YES" id="Cru-bF-b7y"/>
+                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lxi-kU-avx" secondAttribute="bottom" constant="20" symbolic="YES" id="IS7-C6-d88"/>
                                         <constraint firstItem="HuZ-OE-BtT" firstAttribute="top" secondItem="l1G-nB-pyx" secondAttribute="top" id="Ibx-5j-emc"/>
+                                        <constraint firstItem="lxi-kU-avx" firstAttribute="top" secondItem="p7b-Ab-Lml" secondAttribute="top" id="JsJ-DR-s5a"/>
                                         <constraint firstItem="Ca6-D6-0It" firstAttribute="trailing" secondItem="P6t-N6-JJe" secondAttribute="trailing" id="KIg-cm-ScO"/>
                                         <constraint firstItem="tVg-1j-4rq" firstAttribute="top" secondItem="Ca6-D6-0It" secondAttribute="top" id="OFM-1h-FB1"/>
                                         <constraint firstItem="lSW-NY-0jo" firstAttribute="leading" secondItem="ifH-PW-jhJ" secondAttribute="leading" id="PdE-oR-OwL"/>
                                         <constraint firstItem="JtY-xF-S0g" firstAttribute="trailing" secondItem="RjD-Ju-Exe" secondAttribute="trailing" id="RZL-Q5-rXX"/>
+                                        <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="lxi-kU-avx" secondAttribute="trailing" constant="20" symbolic="YES" id="Rnp-iR-Zkb"/>
                                         <constraint firstItem="5qn-Kc-jOT" firstAttribute="top" secondItem="P6t-N6-JJe" secondAttribute="top" id="T1t-jZ-Bly"/>
                                         <constraint firstItem="l1G-nB-pyx" firstAttribute="top" secondItem="JtY-xF-S0g" secondAttribute="bottom" constant="8" symbolic="YES" id="U82-cA-459"/>
                                         <constraint firstItem="ifH-PW-jhJ" firstAttribute="leading" secondItem="RjD-Ju-Exe" secondAttribute="trailing" constant="8" symbolic="YES" id="WA5-Vp-PHL"/>
@@ -1012,6 +1024,7 @@
                             <outlet property="gpuScanLineLabel" destination="lSW-NY-0jo" id="vD4-5S-G4l"/>
                             <outlet property="gpuScrollXLabel" destination="HuZ-OE-BtT" id="k1h-YL-ZVv"/>
                             <outlet property="gpuScrollYLabel" destination="5qn-Kc-jOT" id="hPP-iU-vuX"/>
+                            <outlet property="gpuWindowLabel" destination="lxi-kU-avx" id="IpT-DG-lir"/>
                             <outlet property="hLabel" destination="VxG-WH-REa" id="oPH-J8-2LC"/>
                             <outlet property="instructionLabel" destination="U7y-Hw-5og" id="5p0-qZ-Bf2"/>
                             <outlet property="lLabel" destination="xJG-Bk-YAz" id="BTc-Vu-yTk"/>

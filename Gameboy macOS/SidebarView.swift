@@ -33,6 +33,7 @@ class SidebarView: NSView {
     @IBOutlet weak var gpuScrollXLabel: NSTextField!
     @IBOutlet weak var gpuScrollYLabel: NSTextField!
     @IBOutlet weak var gpuControlLabel: NSTextField!
+    @IBOutlet weak var gpuWindowLabel: NSTextField!
 
     @IBOutlet weak var flagIMELabel: NSTextField!
     @IBOutlet weak var flagIEJoypadLabel: NSTextField!
@@ -130,6 +131,10 @@ class SidebarView: NSView {
         self.gpuScrollXLabel.stringValue = format(value: gpu?.scrollX)
         self.gpuScrollYLabel.stringValue = format(value: gpu?.scrollY)
         self.gpuControlLabel.stringValue = format(value: gpu?.lcdControl.value)
+
+        let windowY = format(value: gameboy?[0xFF4A], format: .Decimal)
+        let windowX = format(value: gameboy?[0xFF4B], format: .Decimal)
+        self.gpuWindowLabel.stringValue = "(\(windowX), \(windowY))"
     }
 
     private func color(for maybeFlag: Register.Set.Flag.Value?) -> NSColor {

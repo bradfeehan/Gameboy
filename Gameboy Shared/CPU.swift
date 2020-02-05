@@ -478,7 +478,7 @@ class CPU {
 
         self.registers.set(flag: .Z, value: newValue == 0)
         self.registers.set(flag: .N, value: true)
-        self.registers.set(flag: .H, value: newValue & 0x0f == 0x0f)
+        self.registers.set(flag: .H, value: false)
     }
 
     private func decrement(_ registerName: Register.Pair.Name) {

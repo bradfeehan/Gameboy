@@ -33,14 +33,6 @@ class CPU {
     func connect(to gameboy: Gameboy) {
         self.gameboy = gameboy
         self.decoder = Operation.Decoder(cpu: self)
-        self.checkBootROM()
-    }
-
-    func checkBootROM() {
-        if !gameboy.bootROMEnabled {
-            self.registers.SP = 0xFFFE
-            self.registers.PC = 0x0100
-        }
     }
 
     subscript(address: Address) -> Byte {
@@ -63,7 +55,6 @@ class CPU {
         // TODO: more resetting
         self.cycleCount = 0
         self.registers.reset()
-        self.checkBootROM()
 
         self.interruptsEnabled = 0
         self.interruptsFlags = 0

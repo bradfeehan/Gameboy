@@ -87,6 +87,27 @@ class Gameboy {
         self.bootROM = fileHandle.readDataToEndOfFile()
         self.cpu.connect(to: self)
         self.gpu.connect(to: self)
+        self.checkBootROM()
+    }
+
+    private func checkBootROM() {
+        if !bootROMEnabled {
+            self.cpu.registers.AF = 0x01B0
+            self.cpu.registers.BC = 0x0013
+            self.cpu.registers.DE = 0x00D8
+            self.cpu.registers.HL = 0x014D
+            self.cpu.registers.SP = 0xFFFE
+            self.cpu.registers.PC = 0x0100
+
+            self.cpu.interruptsFlags = 0x01
+            self.cpu.interruptsEnabled = 0
+            self.cpu.interruptsMaster = true
+
+            self.gpu.lcdControl.value = 0x91
+            self.gpu.lcdStat.mode = .VerticalBlank
+            self.gpu.scanLine = 153
+            self.gpu.cpuCycleCount = 372
+        }
     }
 
     func load(rom: URL) throws {
@@ -102,6 +123,7 @@ class Gameboy {
         self.bootROMEnabled = Self.BOOT_ROM_ENABLED
         self.cpu.reset()
         self.gpu.reset()
+        self.checkBootROM()
         self.screen?.reset()
         self.cartridgeRAM.reset()
         self.workingRAM.reset()

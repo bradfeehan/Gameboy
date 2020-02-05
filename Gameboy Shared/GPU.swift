@@ -48,10 +48,24 @@ class GPU {
     }
 
     var lcdControl = LCDControl()          // 0xFF40 LCDC
-    var mode = Mode.HorizontalBlank        // 0xFF41 STAT (bits 1-0)
+    var lcdStat = LCDStat()                // 0xFF41 STAT
     var scrollY: Byte = 0                  // 0xFF42 SCY   jsGB: yscrl
     var scrollX: Byte = 0                  // 0xFF43 SCX   jsGB: xscrl
-    var scanLine: Byte = 0                 // 0xFF44 LY    jsGB: curline
+    var scanLine: Byte = 0 {               // 0xFF44 LY    jsGB: curline
+        didSet { checkLyCompare() }
+    }
+    var lyCompare: Byte = 0 {              // 0xFF45 LYC
+        didSet { checkLyCompare() }
+    }
+
+    private func checkLyCompare() {
+        let lyCoincidence = (scanLine == lyCompare)
+        lcdStat.lyCoincidenceFlag = lyCoincidence
+        if lyCoincidence && lcdStat.lyCoincidenceInterruptEnabled {
+            gameboy.cpu.interruptsFlags.lcdstat = true
+        }
+    }
+
     var cpuCycleCount: CPU.CycleCount = 0
     private var lastCpuCycleCount: CPU.CycleCount = 0
 
@@ -70,9 +84,6 @@ class GPU {
 
     private var frameBuffer = [Pixel](repeating: PALETTE[0], count: 160 * 144)
 
-    enum Mode {
-        case HorizontalBlank, VerticalBlank, ObjectAttributeMemory, VideoRam
-    }
 
     weak var gameboy: Gameboy!
 
@@ -83,7 +94,7 @@ class GPU {
     func reset() {
         self.videoRAM.reset()
         self.lcdControl = LCDControl()
-        self.mode = Mode.HorizontalBlank
+        self.lcdStat = LCDStat()
         self.scanLine = 0
         self.scrollX = 0
         self.scrollY = 0
@@ -102,7 +113,7 @@ class GPU {
         self.cpuCycleCount += (cpuCycleCount - self.lastCpuCycleCount)
         self.lastCpuCycleCount = cpuCycleCount
 
-        switch self.mode {
+        switch self.lcdStat.mode {
         case .HorizontalBlank:
             if self.cpuCycleCount >= Self.HORIZONTAL_BLANK_CYCLES {
                 // End of HBlank
@@ -112,9 +123,15 @@ class GPU {
                     // Start of VBlank
                     vblank()
                     gameboy.cpu.interruptsFlags.vblank = true
-                    self.mode = .VerticalBlank
+                    self.lcdStat.mode = .VerticalBlank
+                    if self.lcdStat.vBlankInterruptEnabled {
+                        self.gameboy.cpu.interruptsFlags.lcdstat = true
+                    }
                 } else {
-                    self.mode = .ObjectAttributeMemory
+                    self.lcdStat.mode = .ObjectAttributeMemory
+                    if self.lcdStat.oamInterruptEnabled {
+                        self.gameboy.cpu.interruptsFlags.lcdstat = true
+                    }
                 }
 
                 self.cpuCycleCount -= Self.HORIZONTAL_BLANK_CYCLES
@@ -127,7 +144,10 @@ class GPU {
                 if self.scanLine > Self.MAX_SCANLINE {
                     // End of VBlank
                     self.scanLine = 0
-                    self.mode = .ObjectAttributeMemory
+                    self.lcdStat.mode = .ObjectAttributeMemory
+                    if self.lcdStat.oamInterruptEnabled {
+                        self.gameboy.cpu.interruptsFlags.lcdstat = true
+                    }
                 }
 
                 self.cpuCycleCount -= Self.VERTICAL_BLANK_CYCLES
@@ -135,14 +155,17 @@ class GPU {
 
         case .ObjectAttributeMemory:
             if self.cpuCycleCount >= Self.OBJECT_ATTRIBUTE_MEMORY_CYCLES {
-                self.mode = .VideoRam
+                self.lcdStat.mode = .VideoRam
                 self.cpuCycleCount -= Self.OBJECT_ATTRIBUTE_MEMORY_CYCLES
             }
 
         case .VideoRam:
             if self.cpuCycleCount >= Self.VIDEO_RAM_CYCLES {
                 // Start of HBlank
-                self.mode = .HorizontalBlank
+                self.lcdStat.mode = .HorizontalBlank
+                if self.lcdStat.hBlankInterruptEnabled {
+                    self.gameboy.cpu.interruptsFlags.lcdstat = true
+                }
                 self.renderScanline()
                 self.cpuCycleCount -= Self.VIDEO_RAM_CYCLES
             }
@@ -316,53 +339,116 @@ class GPU {
         // Cinoop: BGENABLE
         // jsGB: bgon
         var bgDisplayEnable: Bool {
-            return Byte.Bit._0.read(from: self.value)
+            Byte.Bit._0.read(from: self.value)
         }
 
         // Cinoop: SPRITEENABLE
         // jsGB: objon
         var spriteDisplayEnable: Bool {
-            return Byte.Bit._1.read(from: self.value)
+            Byte.Bit._1.read(from: self.value)
         }
 
         // Cinoop: SPRITEVDOUBLE
         // jsGB: objsize
         var spriteSize: SpriteSize {
-            return Byte.Bit._2.read(from: self.value) ? ._8x16 : ._8x8
+            Byte.Bit._2.read(from: self.value) ? ._8x16 : ._8x8
         }
 
         // Cinoop: TILEMAP / mapOffset -- val ? 0x1c00 : 0x1800
         // jsGB: bgmapbase             -- (val & 0x08) ? 0x1C00 : 0x1800;
         var tileMap: Bool {
-            return Byte.Bit._3.read(from: self.value)
+            Byte.Bit._3.read(from: self.value)
         }
 
         var tileMapBaseAddress: Address {
-            return tileMap ? 0x9c00 : 0x9800
+            tileMap ? 0x9c00 : 0x9800
         }
 
         // Cinoop: TILESET
         // jsGB: bgtilebase -- (val&0x10) ? 0x0000 : 0x0800
         var tileDataSelect: TileDataSelection {
-            return Byte.Bit._4.read(from: self.value) ? .Low : .High
+            Byte.Bit._4.read(from: self.value) ? .Low : .High
         }
 
         // Cinoop: WINDOWENABLE
         // jsGB:
         var windowEnable: Bool {
-            return Byte.Bit._5.read(from: self.value)
+            Byte.Bit._5.read(from: self.value)
         }
 
         // Cinoop: WINDOWTILEMAP
         // jsGB:
         var windowTileMap: Bool {
-            return Byte.Bit._6.read(from: self.value)
+            Byte.Bit._6.read(from: self.value)
         }
 
         // Cinoop: DISPLAYENABLE
         // jsGB: lcdon
         var lcdDisplayEnable: Bool {
-            return Byte.Bit._7.read(from: self.value)
+            Byte.Bit._7.read(from: self.value)
+        }
+    }
+
+    // 0xFF44: STAT
+    struct LCDStat {
+        private var _value: Byte = 0
+
+        var value: Byte {
+            get { self._value }
+            set { self._value = (self._value & 0b0000_0111) | (newValue & 0b0111_1000) }
+        }
+
+        var lyCoincidenceInterruptEnabled: Bool {
+            get { Byte.Bit._6.read(from: self.value) }
+            set { Byte.Bit._6.write(newValue, to: &self.value) }
+        }
+
+        var oamInterruptEnabled: Bool {
+            get { Byte.Bit._5.read(from: self.value) }
+            set { Byte.Bit._5.write(newValue, to: &self.value) }
+        }
+
+        var vBlankInterruptEnabled: Bool {
+            get { Byte.Bit._4.read(from: self.value) }
+            set { Byte.Bit._4.write(newValue, to: &self.value) }
+        }
+
+        var hBlankInterruptEnabled: Bool {
+            get { Byte.Bit._3.read(from: self.value) }
+            set { Byte.Bit._3.write(newValue, to: &self.value) }
+        }
+
+        var lyCoincidenceFlag: Bool {
+            get { Byte.Bit._2.read(from: self.value) }
+            set { Byte.Bit._2.write(newValue, to: &self.value) }
+        }
+
+        var mode: Mode {
+            get { mode(from: self.value) }
+            set { self._value = (self._value & 0b1111_1100) | value(from: newValue) }
+        }
+
+        enum Mode {
+            case HorizontalBlank, VerticalBlank, ObjectAttributeMemory, VideoRam
+        }
+
+        private func mode(from value: Byte) -> Mode {
+            switch value & 0b11 {
+            case 0b00: return .HorizontalBlank
+            case 0b01: return .VerticalBlank
+            case 0b10: return .ObjectAttributeMemory
+            case 0b11: return .VideoRam
+            default: fatalError("Unknown LCDStat Mode value: \(value)")
+            }
+        }
+
+        private func value(from mode: Mode) -> Byte {
+            switch mode {
+            case .HorizontalBlank: return 0b00
+            case .VerticalBlank: return 0b01
+            case .ObjectAttributeMemory: return 0b10
+            case .VideoRam: return 0b11
+            }
         }
     }
 }

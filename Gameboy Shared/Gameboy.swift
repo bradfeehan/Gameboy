@@ -225,9 +225,11 @@ class Gameboy {
             if address == 0xff07 { return cpu.timerControl }
 
             if address == 0xff40 { return gpu.lcdControl.value }
+            if address == 0xff41 { return gpu.lcdStat.value }
             if address == 0xff42 { return gpu.scrollY }
             if address == 0xff43 { return gpu.scrollX }
             if address == 0xff44 { return gpu.scanLine }
+            if address == 0xff45 { return gpu.lyCompare }
 
             if address == 0xff0f { return cpu.interruptsFlags }
             if address == 0xffff { return cpu.interruptsEnabled }
@@ -274,8 +276,11 @@ class Gameboy {
             if address == 0xff07 { cpu.timerControl = newValue }
 
             if address == 0xff40 { gpu.lcdControl.value = newValue }
+            if address == 0xff41 { gpu.lcdStat.value = newValue }
             if address == 0xff42 { gpu.scrollY = newValue }
             if address == 0xff43 { gpu.scrollX = newValue }
+            if address == 0xff44 { gpu.scanLine = 0 }
+            if address == 0xff45 { gpu.lyCompare = newValue }
             if address == 0xff46 { copy(from: Self.OBJECT_ATTRIBUTE_RAM_OFFSET, to: Address(newValue) << 8, bytes: 160) }
             if address == 0xff47 { gpu.updatePalette(GPU.PaletteSelection.Background, newValue) }
             if address == 0xff48 { gpu.updatePalette(GPU.PaletteSelection.Sprite(index: 0), newValue) }

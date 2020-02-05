@@ -121,7 +121,7 @@ class SidebarView: NSView {
         self.instructionLabel.stringValue = format(operation: cpu?.fetch().0)
 
         let gpu = gameboy?.gpu
-        self.gpuModeLabel.stringValue = format(gpuMode: gpu?.mode)
+        self.gpuModeLabel.stringValue = format(gpuMode: gpu?.lcdStat.mode)
 
         let gpuScanlineHex = format(value: gpu?.scanLine, format: .Hexadecimal)
         let gpuScanlineDec = format(value: gpu?.scanLine, format: .Decimal)
@@ -189,7 +189,7 @@ class SidebarView: NSView {
         }
     }
 
-    private func format(gpuMode maybeMode: GPU.Mode?) -> String {
+    private func format(gpuMode maybeMode: GPU.LCDStat.Mode?) -> String {
         guard let mode = maybeMode else {
             return "--"
         }

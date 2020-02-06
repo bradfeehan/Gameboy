@@ -40,6 +40,10 @@ class GameboyViewController: UIViewController {
                 while true { self.gameboy.tick() }
             }
         }
+
+        if let joypadViewController = segue.destination as? JoypadViewController {
+            joypadViewController.gameboy = self.gameboy
+        }
     }
 
     override var shouldAutorotate: Bool {

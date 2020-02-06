@@ -75,6 +75,7 @@
 		80BC802623EBD4AA00A83D8B /* Tetris (World) (Rev A).gb in Resources */ = {isa = PBXBuildFile; fileRef = 80BC802423EBD4AA00A83D8B /* Tetris (World) (Rev A).gb */; };
 		80BC802723EBD4AA00A83D8B /* Tetris (World) (Rev A).gb in Resources */ = {isa = PBXBuildFile; fileRef = 80BC802423EBD4AA00A83D8B /* Tetris (World) (Rev A).gb */; };
 		80BC802823EBD4AA00A83D8B /* Tetris (World) (Rev A).gb in Resources */ = {isa = PBXBuildFile; fileRef = 80BC802423EBD4AA00A83D8B /* Tetris (World) (Rev A).gb */; };
+		80BC802A23EBFC8400A83D8B /* JoypadViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80BC802923EBFC8400A83D8B /* JoypadViewController.swift */; };
 		80CF0CEB237CF64000F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
 		80CF0CEC237CF74800F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
 		80CF0CED237CF74800F9A76C /* Operand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CF0CEA237CF64000F9A76C /* Operand.swift */; };
@@ -147,6 +148,7 @@
 		80AC048923DAB76600609331 /* BootROM.bin */ = {isa = PBXFileReference; lastKnownFileType = archive.macbinary; path = BootROM.bin; sourceTree = "<group>"; };
 		80BC801F23EBAEDE00A83D8B /* Joypad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Joypad.swift; sourceTree = "<group>"; };
 		80BC802423EBD4AA00A83D8B /* Tetris (World) (Rev A).gb */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Tetris (World) (Rev A).gb"; sourceTree = "<group>"; };
+		80BC802923EBFC8400A83D8B /* JoypadViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoypadViewController.swift; sourceTree = "<group>"; };
 		80CF0CEA237CF64000F9A76C /* Operand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operand.swift; sourceTree = "<group>"; };
 		80CF0CEF237CFCA200F9A76C /* Byte.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Byte.swift; sourceTree = "<group>"; };
 		80CF0CF4237E311200F9A76C /* OperationDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationDecoderTests.swift; sourceTree = "<group>"; };
@@ -241,6 +243,7 @@
 			children = (
 				80734A212373E36B00070C59 /* AppDelegate.swift */,
 				80734A232373E36B00070C59 /* GameboyViewController.swift */,
+				80BC802923EBFC8400A83D8B /* JoypadViewController.swift */,
 				80734A252373E36B00070C59 /* Main.storyboard */,
 				80734A282373E36B00070C59 /* LaunchScreen.storyboard */,
 				80734A2B2373E36B00070C59 /* Info.plist */,
@@ -469,6 +472,7 @@
 				80CF0D01237E50D100F9A76C /* GPU.swift in Sources */,
 				80972FBB237A8A1E000C51DC /* Operation.swift in Sources */,
 				808DA5C3237686F300C1E28D /* Memory.swift in Sources */,
+				80BC802A23EBFC8400A83D8B /* JoypadViewController.swift in Sources */,
 				808DA5C82376972500C1E28D /* Register.swift in Sources */,
 				80BC802023EBAEDE00A83D8B /* Joypad.swift in Sources */,
 				80428C422374DBC40085F4F2 /* Instruction.swift in Sources */,

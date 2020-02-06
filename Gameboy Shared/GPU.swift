@@ -215,7 +215,6 @@ class GPU {
 
         var scanLineRow = [Byte](repeating: 0, count: 160)
 
-        //155674
         if lcdControl.bgDisplayEnable {
             let pixelOffset = Int(scanLine) * 160
             let mapOffset = lcdControl.tileMapBaseAddress + Address((((UInt16(scanLine) + UInt16(scrollY)) & 0xff) >> 3) << 5)

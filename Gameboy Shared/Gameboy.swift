@@ -281,7 +281,7 @@ class Gameboy {
             if address == 0xff43 { gpu.scrollX = newValue }
             if address == 0xff44 { gpu.scanLine = 0 }
             if address == 0xff45 { gpu.lyCompare = newValue }
-            if address == 0xff46 { copy(from: Self.OBJECT_ATTRIBUTE_RAM_OFFSET, to: Address(newValue) << 8, bytes: 160) }
+            if address == 0xff46 { copy(from: Address(newValue) << 8, to: Self.OBJECT_ATTRIBUTE_RAM_OFFSET, bytes: 160) }
             if address == 0xff47 { gpu.updatePalette(GPU.PaletteSelection.Background, newValue) }
             if address == 0xff48 { gpu.updatePalette(GPU.PaletteSelection.Sprite(index: 0), newValue) }
             if address == 0xff49 { gpu.updatePalette(GPU.PaletteSelection.Sprite(index: 1), newValue) }

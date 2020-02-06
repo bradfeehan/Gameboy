@@ -122,7 +122,9 @@ class GPU {
                 if self.scanLine == Self.VERTICAL_BLANK_SCANLINE {
                     // Start of VBlank
                     vblank()
-                    gameboy.cpu.interruptsFlags.vblank = true
+                    if gameboy.cpu.interruptsEnabled.vblank {
+                        gameboy.cpu.interruptsFlags.vblank = true
+                    }
                     self.lcdStat.mode = .VerticalBlank
                     if self.lcdStat.vBlankInterruptEnabled {
                         self.gameboy.cpu.interruptsFlags.lcdstat = true

@@ -43,6 +43,31 @@ class GameboyViewController: NSViewController {
         }
     }
 
+    override func viewDidLoad() {
+        NSEvent.addLocalMonitorForEvents(matching: .keyDown) { event in
+            self.keyState(true, with: event)
+            return event
+        }
+        NSEvent.addLocalMonitorForEvents(matching: .keyUp) { event in
+            self.keyState(false, with: event)
+            return event
+        }
+    }
+
+    private func keyState(_ state: Bool, with event: NSEvent) {
+        switch (event.modifierFlags.intersection(.deviceIndependentFlagsMask), event.keyCode) {
+        case ([.function, .numericPad], 123): self.gameboy.joypad.left = state
+        case ([.function, .numericPad], 124): self.gameboy.joypad.right = state
+        case ([.function, .numericPad], 125): self.gameboy.joypad.down = state
+        case ([.function, .numericPad], 126): self.gameboy.joypad.up = state
+        case ([], 0): self.gameboy.joypad.a = state
+        case ([], 45): self.gameboy.joypad.b = state
+        case ([], 36): self.gameboy.joypad.start = state
+        case ([], 49): self.gameboy.joypad.select = state
+        default: break
+        }
+    }
+
     override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
         if let sidebarViewController = segue.destinationController as? SidebarViewController {
             self.sidebarViewController = sidebarViewController

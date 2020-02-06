@@ -63,6 +63,7 @@ class Gameboy {
     var cpu = CPU()
     var gpu = GPU()
     weak var screen: GameboyScreen?
+    var joypad = Joypad()
 
     let bootROMImage = #fileLiteral(resourceName: "BootROM.bin")
     let bootROM: Data
@@ -207,12 +208,12 @@ class Gameboy {
 
                 if !Byte.Bit._5.read(from: io[0xff00]!) {
                     Byte.Bit._4.write(true, to: &byte)
-                    // TODO: add button keys in
+                    self.joypad.write(selection: .Buttons, to: &byte)
                     return byte
                 }
                 if !Byte.Bit._4.read(from: io[0xff00]!) {
                     Byte.Bit._5.write(true, to: &byte)
-                    // TODO: add direction keys in
+                    self.joypad.write(selection: .Directions, to: &byte)
                     return byte
                 }
 

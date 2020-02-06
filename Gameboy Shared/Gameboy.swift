@@ -203,7 +203,7 @@ class Gameboy {
             }
 
             if address == 0xff00 {
-                var byte: Byte = 0xc0
+                var byte: Byte = 0xcf
 
                 if !Byte.Bit._5.read(from: io[0xff00]!) {
                     Byte.Bit._4.write(true, to: &byte)

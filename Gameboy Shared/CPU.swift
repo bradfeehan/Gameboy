@@ -26,8 +26,6 @@ class CPU {
     var interruptsMaster: Bool = true                //        IME?
     var interruptsScheduled: Bool = true
 
-    var lastOperation: Operation?
-
     var stopped = false
 
     func connect(to gameboy: Gameboy) {
@@ -157,7 +155,6 @@ class CPU {
         switch operation {
         case let .Add(operand1, operand2, carrying):
             add(to: operand1, operand2, carrying)
-            self.lastOperation = operation
         case let .And(operand):
             and(operand)
         case let .Call(address, condition):
@@ -174,20 +171,16 @@ class CPU {
             decimalAdjustAccumulator()
         case let .DecrementByte(operand):
             decrement(operand)
-            self.lastOperation = operation
         case let .DecrementWord(operand):
             decrement(operand)
-            self.lastOperation = operation
         case let .ExclusiveOr(operand):
             exclusiveOr(operand)
         case .Halt:
             halt()
         case let .IncrementByte(operand):
             increment(operand)
-            self.lastOperation = operation
         case let .IncrementWord(operand):
             increment(operand)
-            self.lastOperation = operation
         case let .Interrupts(value):
             interrupts(enabled: value)
         case let .Invalid(address, opCode):
@@ -224,7 +217,6 @@ class CPU {
             stop()
         case let .Subtract(operand, carrying):
             subtract(operand, carrying)
-            self.lastOperation = operation
         case let .Swap(operand):
             swap_(operand)
         }

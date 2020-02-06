@@ -171,15 +171,15 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="XKq-WX-m3b">
-                                <rect key="frame" x="507" y="0.0" width="300" height="380"/>
+                                <rect key="frame" x="422" y="0.0" width="385" height="380"/>
                                 <connections>
                                     <segue destination="2X5-Nu-M9s" kind="embed" id="wql-TO-zSz"/>
                                 </connections>
                             </containerView>
                             <containerView translatesAutoresizingMaskIntoConstraints="NO" id="s9Y-ih-pcf">
-                                <rect key="frame" x="0.0" y="0.0" width="507" height="380"/>
+                                <rect key="frame" x="0.0" y="0.0" width="422" height="380"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="s9Y-ih-pcf" secondAttribute="height" multiplier="4:3" id="TQ7-1Q-kFT"/>
+                                    <constraint firstAttribute="width" secondItem="s9Y-ih-pcf" secondAttribute="height" multiplier="160:144" id="TQ7-1Q-kFT"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="XfG-lQ-9wD" kind="embed" id="8Hr-Rh-7ay"/>

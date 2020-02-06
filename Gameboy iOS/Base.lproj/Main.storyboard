@@ -1,24 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Game View Controller-->
+        <!--Gameboy View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <viewLayoutGuide key="safeArea" id="bNo-s9-wk6"/>
+                <viewController id="BV1-FR-VrT" userLabel="Gameboy View Controller" customClass="GameboyViewController" customModule="Gameboy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pyz-qJ-xqa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dOD-ju-P7l">
+                                <rect key="frame" x="0.0" y="266.5" width="414" height="373"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dOD-ju-P7l" secondAttribute="height" multiplier="160:144" id="jdC-mk-je7" userLabel="aspect = 4:3"/>
+                                </constraints>
+                                <connections>
+                                    <segue destination="054-J0-xZj" kind="embed" id="f9N-ws-PyN"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dOD-ju-P7l" firstAttribute="leading" secondItem="o7d-7X-dZq" secondAttribute="leading" id="2U9-A7-Tdt"/>
+                            <constraint firstItem="dOD-ju-P7l" firstAttribute="centerY" secondItem="o7d-7X-dZq" secondAttribute="centerY" id="7bS-p7-vUv"/>
+                            <constraint firstItem="o7d-7X-dZq" firstAttribute="trailing" secondItem="dOD-ju-P7l" secondAttribute="trailing" id="uHH-9B-67X"/>
+                            <constraint firstItem="dOD-ju-P7l" firstAttribute="centerX" secondItem="o7d-7X-dZq" secondAttribute="centerX" id="zeh-Fw-e6n"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="o7d-7X-dZq"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="6rI-rb-gFP">
+            <objects>
+                <viewController id="054-J0-xZj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d7j-zw-8Xk" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="373"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bdb-25-HAh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="904" y="-37"/>
         </scene>
     </scenes>
 </document>

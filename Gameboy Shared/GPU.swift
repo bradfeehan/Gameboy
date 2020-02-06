@@ -27,7 +27,6 @@ class GPU {
     typealias Pixel = UInt32
     typealias Palette = [Pixel]
     static let PALETTE: Palette = [0xffdddddd, 0xffaaaaaa, 0xff555555, 0xff000000]
-//    static let PALETTE: Palette = [0xff0000dd, 0xff00aa00, 0xff550000, 0xff000000]
 
     var backgroundPalette = Palette(repeating: GPU.PALETTE[0], count: 4)
     var spritePalette = [Palette](repeating: Palette(repeating: GPU.PALETTE[0], count: 4), count: 2)
@@ -337,26 +336,18 @@ class GPU {
             case High, Low
         }
 
-        // Cinoop: BGENABLE
-        // jsGB: bgon
         var bgDisplayEnable: Bool {
             Byte.Bit._0.read(from: self.value)
         }
 
-        // Cinoop: SPRITEENABLE
-        // jsGB: objon
         var spriteDisplayEnable: Bool {
             Byte.Bit._1.read(from: self.value)
         }
 
-        // Cinoop: SPRITEVDOUBLE
-        // jsGB: objsize
         var spriteSize: SpriteSize {
             Byte.Bit._2.read(from: self.value) ? ._8x16 : ._8x8
         }
 
-        // Cinoop: TILEMAP / mapOffset -- val ? 0x1c00 : 0x1800
-        // jsGB: bgmapbase             -- (val & 0x08) ? 0x1C00 : 0x1800;
         var tileMap: Bool {
             Byte.Bit._3.read(from: self.value)
         }
@@ -365,26 +356,18 @@ class GPU {
             tileMap ? 0x9c00 : 0x9800
         }
 
-        // Cinoop: TILESET
-        // jsGB: bgtilebase -- (val&0x10) ? 0x0000 : 0x0800
         var tileDataSelect: TileDataSelection {
             Byte.Bit._4.read(from: self.value) ? .Low : .High
         }
 
-        // Cinoop: WINDOWENABLE
-        // jsGB:
         var windowEnable: Bool {
             Byte.Bit._5.read(from: self.value)
         }
 
-        // Cinoop: WINDOWTILEMAP
-        // jsGB:
         var windowTileMap: Bool {
             Byte.Bit._6.read(from: self.value)
         }
 
-        // Cinoop: DISPLAYENABLE
-        // jsGB: lcdon
         var lcdDisplayEnable: Bool {
             Byte.Bit._7.read(from: self.value)
         }

@@ -50,7 +50,6 @@ class CPU {
     }
 
     func reset() {
-        // TODO: more resetting
         self.cycleCount = 0
         self.registers.reset()
 
@@ -400,68 +399,6 @@ class CPU {
         self.registers.set(flag: .C, value: correction & 0x40 > 0)
         self.registers.set(flag: .Z, value: self.registers.A == 0)
         self.registers.set(flag: .H, value: false)
-
-//        /////////////////////
-//        // Old implementation
-//        let oldValue = self.registers.A
-//        let negative = self.registers.get(flag: .N)
-//        let carry = self.registers.get(flag: .C)
-//        let halfCarry = self.registers.get(flag: .H)
-//
-//        let operand: Byte
-//        let newCarry: Bool
-//
-//        switch (negative, oldValue.highNibble, oldValue.lowNibble, carry, halfCarry) {
-//        case (false, 0x00...0x09, 0x00...0x09, false, false):
-//            operand = 0x00
-//            newCarry = false
-//        case (false, 0x00...0x08, 0x0a...0x0f, false, false):
-//            operand = 0x06
-//            newCarry = false
-//        case (false, 0x00...0x09, 0x00...0x03, false, true):
-//            operand = 0x06
-//            newCarry = false
-//        case (false, 0x0a...0x0f, 0x00...0x09, false, false):
-//            operand = 0x60
-//            newCarry = true
-//        case (false, 0x09...0x0f, 0x0a...0x0f, false, false):
-//            operand = 0x66
-//            newCarry = true
-//        case (false, 0x0a...0x0f, 0x00...0x03, false, true):
-//            operand = 0x66
-//            newCarry = true
-//        case (false, 0x00...0x02, 0x00...0x09, true, false):
-//            operand = 0x60
-//            newCarry = true
-//        case (false, 0x00...0x02, 0x0a...0x0f, true, false):
-//            operand = 0x66
-//            newCarry = true
-//        case (false, 0x00...0x03, 0x00...0x03, true, true):
-//            operand = 0x66
-//            newCarry = true
-//        case (true, 0x00...0x09, 0x00...0x09, false, false):
-//            operand = 0x00
-//            newCarry = false
-//        case (true, 0x00...0x08, 0x06...0x0f, false, true):
-//            operand = 0xfa
-//            newCarry = false
-//        case (true, 0x07...0x0f, 0x00...0x09, true, false):
-//            operand = 0xa0
-//            newCarry = true
-//        case (true, 0x07...0x0f, 0x07...0x0f, true, true):
-//            operand = 0x9a
-//            newCarry = true
-//        default:
-//            operand = 0x00
-//            newCarry = false
-//        }
-//
-//        let newValue = oldValue &+ operand
-//        self.registers.A = newValue
-//
-//        self.registers.set(flag: .Z, value: newValue == 0)
-//        self.registers.set(flag: .H, value: false)
-//        self.registers.set(flag: .C, value: newCarry)
     }
 
     private func decrement(_ operand: Operand.OneByte) {
@@ -720,15 +657,6 @@ class CPU {
 
     private func stop() {
         self.stopped = true
-
-//        var key1 = self[0xff4d]
-//        let prepareSpeedSwitch = Byte.Bit._0.read(from: key1)
-//        let currentSpeed = Byte.Bit._7.read(from: key1)
-//        if prepareSpeedSwitch {
-//            Byte.Bit._0.write(false, to: &key1)
-//            Byte.Bit._7.write(!currentSpeed, to: &key1)
-//            self[0xff4d] = key1
-//        }
     }
 
     private func subtract(_ operand: Operand.OneByte, _ carrying: Instruction.Definition.Carrying) {

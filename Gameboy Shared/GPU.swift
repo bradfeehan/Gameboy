@@ -302,8 +302,8 @@ class GPU {
                 fatalError("Invalid size slice for sprite \(slice.count)")
             }
 
-            self.x = Int(slice[slice.startIndex]) - 8
-            self.y = Int(slice[slice.startIndex + 1]) - 16
+            self.y = Int(slice[slice.startIndex]) - 16
+            self.x = Int(slice[slice.startIndex + 1]) - 8
             self.tile = slice[slice.startIndex + 2]
             self.options = slice[slice.startIndex + 3]
         }

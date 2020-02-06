@@ -80,12 +80,12 @@ class CPU {
         self.cycleCount += cycleCount
         let afterPeriods = self.cycleCount
 
-        if self.timerControl.timerStart {
-            let dividerDifference = afterPeriods / 256 - beforePeriods / 256
-            if dividerDifference > 0 {
-                self.timerDivider &+= UInt8(dividerDifference)
-            }
+        let dividerDifference = afterPeriods / 256 - beforePeriods / 256
+        if dividerDifference > 0 {
+            self.timerDivider &+= UInt8(dividerDifference)
+        }
 
+        if self.timerControl.timerStart {
             let divisor = UInt64(self.timerControl.frequency.divisor)
             let counterDifference = afterPeriods / divisor - beforePeriods / divisor
             if counterDifference > 0 {

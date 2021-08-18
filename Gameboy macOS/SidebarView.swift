@@ -137,6 +137,19 @@ class SidebarView: NSView {
         self.gpuWindowLabel.stringValue = "(\(windowX), \(windowY))"
     }
 
+    func printDisassembly() {
+        guard let registers = gameboy?.cpu.registers else { return }
+
+        let flags = "\(registers.get(flag: .Z) ? "Z" : "z")\(registers.get(flag: .N) ? "N" : "n")\(registers.get(flag: .H) ? "H" : "h")\(registers.get(flag: .C) ? "C" : "c")"
+
+        print(
+            String(
+                format: "A=0x%02X F=\(flags) BC=0x%04X DE=0x%04X HL=0x%04X SP=0x%04X PC=0x%04X",
+                registers.A, registers.BC, registers.DE, registers.HL, registers.SP, registers.PC
+            )
+        )
+    }
+
     private func color(for maybeFlag: Register.Set.Flag.Value?) -> NSColor {
         guard let flag = maybeFlag else { return NSColor.tertiaryLabelColor }
 

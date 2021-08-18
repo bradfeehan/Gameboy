@@ -27,7 +27,10 @@ class SidebarViewController: NSViewController {
 
     private func tick(_ gameboy: Gameboy) {
         gameboy.tick()
-        if liveUpdate { sidebarView.triggerUpdate() }
+        if liveUpdate {
+            sidebarView.triggerUpdate()
+            sidebarView.printDisassembly()
+        }
     }
 
     @IBOutlet weak var liveUpdateCheckBox: NSButton!
